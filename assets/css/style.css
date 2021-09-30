@@ -4,8 +4,8 @@ padding: none;
 
 }
 section#labirinto{
-width: 100%;
-height: 40vw;
+width: 441px;
+height: 300px;
 background-color: blue;
 display: flex;
 flex-wrap: wrap;
@@ -13,26 +13,25 @@ flex-wrap: wrap;
 }
 
 div.Labirinto__Parede{
-    width: 4.761904762%;
-    height: 6%; 
-    background-color: crimson;
-    display:block;
+width: 21px;
+height: 21px;
+background-color: crimson;
 }
 
 div.Labirinto__Passagem{
-    width: 4.761904762%;
-    height: 6%;
+ width: 21px;
+ height: 21px;
  background-color: darkkhaki;
 }
 div.Labirinto__Start{
-    width: 4.761904762%;
-    height: 6%;
+    width: 21px;
+    height: 21px;
     background-color: rgb(255, 238, 0);
 
 }
 div.Labirinto__Finish{
-    width: 4.761904762%;
-    height: 6%;
+    width: 21px;
+    height: 21px;
     background-color: rgb(255, 17, 223);
 
 }

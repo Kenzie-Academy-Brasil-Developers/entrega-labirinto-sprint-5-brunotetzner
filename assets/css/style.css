@@ -6,7 +6,10 @@
 body{
 margin: none;
 padding: none;
-height: 800px;
+height: 400px;
+display:flex;
+justify-content: center;
+align-items: center;
 
 }
 section#labirinto{
@@ -52,5 +55,4 @@ div.Labirinto__player{
     background-position: top center;
     
     position: relative;
-
 }

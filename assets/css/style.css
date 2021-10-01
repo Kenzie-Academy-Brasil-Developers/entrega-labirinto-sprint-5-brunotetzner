@@ -27,11 +27,24 @@ div.Labirinto__Start{
     width: 21px;
     height: 21px;
     background-color: rgb(255, 238, 0);
+    position: relative;
 
 }
 div.Labirinto__Finish{
     width: 21px;
     height: 21px;
     background-color: rgb(255, 17, 223);
+}
+div.Labirinto__player{
+    width: 21px;
+    height: 21px;
+    border-radius:50%;
+    background-image: url('../../assets/img/Frodo\ Baggins.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: top center;
+    left:0;
+    top:0;
+    position: absolute;
 
 }

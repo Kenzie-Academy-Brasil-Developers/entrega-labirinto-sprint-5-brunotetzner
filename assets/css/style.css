@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
 body{
 margin: none;
 padding: none;
@@ -9,6 +14,7 @@ height: 300px;
 background-color: blue;
 display: flex;
 flex-wrap: wrap;
+position: relative;
 
 }
 
@@ -27,7 +33,7 @@ div.Labirinto__Start{
     width: 21px;
     height: 21px;
     background-color: rgb(255, 238, 0);
-    position: relative;
+    
 
 }
 div.Labirinto__Finish{
@@ -43,8 +49,7 @@ div.Labirinto__player{
     background-repeat:no-repeat;
     background-size:cover;
     background-position: top center;
-    left:0;
-    top:0;
-    position: absolute;
+   
+    position: relative;
 
 }

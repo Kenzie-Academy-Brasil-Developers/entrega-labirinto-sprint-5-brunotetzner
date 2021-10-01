@@ -75,16 +75,17 @@ for (let i = 0; i < map.length; i++) {
 [0][9]
 se clicar em ArrowRigth,if([1][9] === ' '
 */
-function procurar() {
-    for (let i = 0; i < map.length; i++) {
-      for (let j = 0; j < map[i].length; j++) {
-        if (map[i][j] === "S") {
-          return [i, j];
-        }
-      }
-    }
-  }
-  let playerPosition = procurar()
+// function procurar() {
+//     for (let i = 0; i < map.length; i++) {
+//       for (let j = 0; j < map[i].length; j++) {
+//         if (map[i][j] === "S") {
+//           return [i, j];
+//         }
+//       }
+//     }
+//   }
+//   let playerPosition = procurar()
+let playerPosition = [9,0]
 const player = document.createElement('div')
 player.classList.add('Labirinto__player')
 largada.appendChild(player)
@@ -93,32 +94,30 @@ let boxVertical = 0;
 let boxHorizontal = 0;
 
 document.addEventListener('keydown', (event) => {
-
-
     const keyName = event.key;
-    if (keyName === 'ArrowDown' && map[playerPosition[0]][playerPosition[1] + 1] === ' ') {
-        playerPosition[1] += 1
+    if (keyName === 'ArrowDown' && map[playerPosition[0]+ 1][playerPosition[1]] === ' ') {
+        playerPosition[0] += 1
         boxVertical += 21
         player.style.top = boxVertical + "px"
     }
-    else if (keyName === 'ArrowUp' && map[playerPosition[0]][playerPosition[1] - 1] === ' ') {
-        playerPosition[1] -= 1
+    else if (keyName === 'ArrowUp' && map[playerPosition[0]- 1][playerPosition[1]] === ' ') {
+        playerPosition[0] -= 1
         boxVertical -= 21
         player.style.top = boxVertical + "px";
     }
 
-    else if (keyName === 'ArrowRight' && map[playerPosition[0] + 1][playerPosition[1]] === ' ') {
-        playerPosition[0] += 1
+    else if (keyName === 'ArrowRight' && map[playerPosition[0]][playerPosition[1]+ 1] === ' ') {
+        playerPosition[1] += 1
         boxHorizontal += 21
 
         player.style.left = boxHorizontal + "px";
     }
-    else if (keyName === 'ArrowLeft' && map[playerPosition[0] - 1][playerPosition[1]] === ' ') {
-        playerPosition[0] -= 1
+    else if (keyName === 'ArrowLeft' && map[playerPosition[0]][playerPosition[1]-1] === ' ') {
+        playerPosition[1] -= 1
         boxHorizontal -= 21
         player.style.left = boxHorizontal + "px";
     }
-    console.log(playerPosition, map[playerPosition[0]][playerPosition[1]])
+    console.log(playerPosition, map[playerPosition[0]+1][playerPosition[1]])
 });
 
 

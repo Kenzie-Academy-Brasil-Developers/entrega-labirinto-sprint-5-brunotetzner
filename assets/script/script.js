@@ -65,6 +65,7 @@ function victory(){
     containerVictory.classList.add('victoryContainer')
     containerVictoryBackground.classList.add('victoryContainer__Background')
     containerVictoryBackgroundTwo.classList.add('victoryContainer__Background')
+    containerVictoryBackgroundTwo.classList.add('victoryContainer__Background2')
     victoryText.classList.add('victoryContainer__Text')
     victoryTextTwo.classList.add('victoryContainer__Text')
  

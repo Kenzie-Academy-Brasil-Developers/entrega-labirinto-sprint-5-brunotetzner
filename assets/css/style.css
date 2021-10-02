@@ -116,7 +116,7 @@ div.victoryContainer{
 
     display: flex;
     flex-wrap: wrap;
-    align-items:unset;
+    align-items:baseline;
     
 }
 div.victoryContainer__Background{
@@ -127,13 +127,17 @@ div.victoryContainer__Background{
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+div.victoryContainer__Background2{
+    margin-top:218px;
+    
 }
 p.victoryContainer__Text{
     color:white;
     opacity: none;
 }
-
-
 
 button#restart__button{
     background-image:url('../../assets/img/oneRing.jpeg');
@@ -146,4 +150,3 @@ button#restart__button{
     border: 1px solid white;
     color:white;
 }
-

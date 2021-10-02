@@ -94,29 +94,29 @@ document.addEventListener('keydown', (event) => {
     const keyName = event.key;
     if (keyName === 'ArrowDown' && map[playerPosition[0]+ 1][playerPosition[1]] === ' ') {
         playerPosition[0] += 1
-        boxVertical += 21
+        boxVertical += 30
         player.style.top = boxVertical + "px"
     }
     else if (keyName === 'ArrowUp' && map[playerPosition[0]- 1][playerPosition[1]] === ' ') {
         playerPosition[0] -= 1
-        boxVertical -= 21
+        boxVertical -= 30
         player.style.top = boxVertical + "px";
     }
     else if (keyName === 'ArrowRight' && map[playerPosition[0]][playerPosition[1]+ 1] === ' ') {
         playerPosition[1] += 1
-        boxHorizontal += 21
+        boxHorizontal += 30
         player.style.left = boxHorizontal + "px";
     }
     else if (keyName === 'ArrowRight' && map[playerPosition[0]][playerPosition[1]+1] === 'F') {
         playerPosition[1] += 1
-        boxHorizontal += 21
+        boxHorizontal += 30
         player.style.left = boxHorizontal + "px";
         victory()
     }
     else if (keyName === 'ArrowLeft' && map[playerPosition[0]][playerPosition[1]-1] === ' ' ||
     keyName === 'ArrowLeft' && map[playerPosition[0]][playerPosition[1]-1] === 'S') { 
         playerPosition[1] -= 1
-        boxHorizontal -= 21
+        boxHorizontal -= 30
         player.style.left = boxHorizontal + "px";  
     }
 });

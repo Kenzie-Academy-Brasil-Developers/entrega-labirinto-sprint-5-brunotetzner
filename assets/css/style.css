@@ -14,7 +14,7 @@ body{
     justify-content: center; 
     width: 100%;
     background-image: url('../../assets/img/MAP.jpg');
-    background-repeat:no-repeat;
+   
     background-position:center;
     background-size:cover;
 }
@@ -22,7 +22,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 317px;
+    height: 450px;
     justify-content: center;
     align-items: flex-start;
 }
@@ -34,11 +34,12 @@ header#title_page{
     justify-content: center;
 }
 h1#titile_page__text{
+    font-size: 50px;
     color:white;
     font-family: 'Lobster', cursive;
 }
 section#labirinto{
- width: 443px;
+ width: 630px;
  height: 100%;
   display: flex;
  flex-wrap: wrap;
@@ -47,8 +48,8 @@ section#labirinto{
 }
 
 div.Labirinto__Parede{
-width: 21px;
-  height: 21px;
+width: 30px;
+  height: 30px;
  background-image: url('../../assets/img/brick4.png');
  background-position:center ;
  background-repeat:no-repeat;
@@ -56,32 +57,32 @@ width: 21px;
  opacity: 0.9;
 }
 div.Labirinto__Passagem{
- width: 21px;
- height: 21px;
+ width: 30px;
+ height: 30px;
  background-image: url('../../assets/img/graybrick.jpeg');
  background-position:center ;
  background-repeat:no-repeat;
  background-size:cover;
 }
 div.Labirinto__Start{
-    width: 21px;
-    height: 21px;
+    width: 30px;
+    height: 30px;
     background-image: url('../../assets/img/partida.jpeg');
     background-position:center ;
     background-repeat:no-repeat;
     background-size:cover;
 }
 div.Labirinto__Finish{
-    width: 21px;
-    height: 21px;
+    width: 30px;
+    height: 30px;
     background-image: url('../../assets/img/chegada.jpg!d   ');
     background-position:center ;
     background-repeat:no-repeat;
     background-size:cover;
 }
 div.Labirinto__player{
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
     border-radius:50%;
     background-image: url('../../assets/img/Frodo\ Baggins.png');
     background-repeat:no-repeat;
@@ -92,19 +93,24 @@ div.Labirinto__player{
 }
 section.container-text{
    height: 100%;
-   width: 100px;
+   width: 150px;
    display: flex;
+   flex-direction: column;
    align-items: center;
    justify-content: center;
 }
 h2.text__style{
     color:white;
-    font-size: 18px;
-    padding: 10px;
+    
+    font-size: 30px;
+    margin-top: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
     font-family: 'Dancing Script', cursive;
     width: 100px;
     display: flex;
     justify-content: center;
+    
 }
 div.victoryContainer{
     background-image: url('../../assets/img/VICTORY2.jpg');
@@ -121,7 +127,7 @@ div.victoryContainer{
 }
 div.victoryContainer__Background{
     width: 100%;
-    height: 50px;
+    height: 70px;
     background-color:gray;
     opacity: 0.8;
     display: flex;
@@ -131,10 +137,10 @@ div.victoryContainer__Background{
     border-top: 2px solid white;
 }
 div.victoryContainer__Background2{
-    margin-top:218px;
-    
+   
 }
 p.victoryContainer__Text{
+    font-size: 30px;
     color:white;
     opacity: none;
 }
@@ -144,9 +150,11 @@ button#restart__button{
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
-    width: 70px;
-    height: 50px;
+    width: 140px;
+    height: 100px;
     border-radius: 10px 10px 10px 10px;
     border: 1px solid white;
     color:white;
+    font-size: 25px;
+    
 }

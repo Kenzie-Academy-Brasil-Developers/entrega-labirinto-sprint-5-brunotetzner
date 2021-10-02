@@ -131,6 +131,19 @@ div.victoryContainer__Background{
 p.victoryContainer__Text{
     color:white;
     opacity: none;
-    
+}
+
+
+
+button#restart__button{
+    background-image:url('../../assets/img/oneRing.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 70px;
+    height: 50px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid white;
+    color:white;
 }
 

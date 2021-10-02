@@ -20,17 +20,7 @@ const map = [
     "W       W       W   W",
     "WWWWWWWWWWWWWWWWWWWWW",
 ];
-//1-criar o labirindo
-//A- Criar um loop que percorre o array
-//B- Criar um loop dentro do loop 
-//c- Criar divs para cada caracter
-//sendo uma classe para cada tipo
-//D- Criar a estilização
 
-//2-O JOGADOR 
-//A- criar o bloco que representa o jogador 
-//B- Adicionar o jogador como filho da div S
-//C- 
 //Section que contém o labirinto 
 const allLabirinto = document.getElementById('labirinto')
 const largada = document.createElement('div') // div da largada
@@ -68,23 +58,6 @@ for (let i = 0; i < map.length; i++) {
 
 /*-----------------------------------------------------------*/
 //Jogador
-//Usar o array como base para a entrega
-//começar pela posição do jogador 
-//Comparar com o array cada movimento e quardar o valor em uma variavel
-/* inicio
-[0][9]
-se clicar em ArrowRigth,if([1][9] === ' '
-*/
-// function procurar() {
-//     for (let i = 0; i < map.length; i++) {
-//       for (let j = 0; j < map[i].length; j++) {
-//         if (map[i][j] === "S") {
-//           return [i, j];
-//         }
-//       }
-//     }
-//   }
-//   let playerPosition = procurar()
 let playerPosition = [9,0]
 const player = document.createElement('div')
 player.classList.add('Labirinto__player')
@@ -117,7 +90,11 @@ document.addEventListener('keydown', (event) => {
         boxHorizontal -= 21
         player.style.left = boxHorizontal + "px";
     }
-    console.log(playerPosition, map[playerPosition[0]+1][playerPosition[1]])
+    else if (keyName === 'ArrowLeft' && map[playerPosition[0]][playerPosition[1]-1] === 'F') {
+        playerPosition[1] -= 1
+        boxHorizontal -= 21
+        player.style.left = boxHorizontal + "px";
+    }
 });
 
 

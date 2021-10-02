@@ -50,7 +50,7 @@ section#labirinto{
 div.Labirinto__Parede{
 width: 30px;
   height: 30px;
- background-image: url('../../assets/img/brick4.png');
+ background-image: url('../../assets/img/parede0.jpeg');
  background-position:center ;
  background-repeat:no-repeat;
  background-size:cover;
@@ -93,7 +93,7 @@ div.Labirinto__player{
 }
 section.container-text{
    height: 100%;
-   width: 150px;
+   width: 200px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -137,7 +137,9 @@ div.victoryContainer__Background{
     border-top: 2px solid white;
 }
 div.victoryContainer__Background2{
-   
+   margin-top:310px;
+   padding-left:10px;
+   padding-right: 10px;
 }
 p.victoryContainer__Text{
     font-size: 30px;
@@ -156,5 +158,5 @@ button#restart__button{
     border: 1px solid white;
     color:white;
     font-size: 25px;
-    
+   
 }

@@ -1,14 +1,8 @@
-/* W = paredes
-" " = Entradas
-S = inicio
-F = fim (mostrar mensgame de vitória ao cheagr lá)
-*/
-
-/*Cada celula deve ser uma div
-cada linha uma div ou section
-posicionar com flex
-
-*/
+//Array que determina a forma do labirinto
+/* 'W' = parede
+' ' =   caminho
+'S' = saída
+'F' = 'chegada' */
 const map = [
     "WWWWWWWWWWWWWWWWWWWWW",
     "W   W     W     W W W",
@@ -26,44 +20,81 @@ const map = [
     "W       W       W   W",
     "WWWWWWWWWWWWWWWWWWWWW",
 ];
-//1-criar o labirindo
-//A- Criar um loop que percorre o array
-//B- Criar um loop dentro do loop 
-//c- Criar divs para cada caracter
-    //sendo uma classe para cada tipo
-//D- Criar a estilização
 
-//2-O JOGADOR 
-    //A- criar o bloco que representa o jogador 
-    //B- Adicionar o jogador como filho da div S
-    //C- 
+//Section que contém o labirinto 
 const allLabirinto = document.getElementById('labirinto')
+const largada = document.createElement('div') // div da largada
+const chegada = document.createElement('div') //div da chegada
 
-let mapLine 
-
-for(let i =0; i<map.length;i++){
+//---------Criando Divs----------
+let mapLine
+let mapAllItens = []
+for (let i = 0; i < map.length; i++) {
     mapLine = map[i].split('')
-    for(let j =0; j<mapLine.length;j++){
+    mapAllItens.push(mapLine)
+    for (let j = 0; j < mapLine.length; j++) {
         const parede = document.createElement('div')
-        if(mapLine[j] === 'W'){
-            
-            parede.classList.add('Labirinto__Parede')
-            allLabirinto.appendChild(parede)  
-        }
-       else if(mapLine[j] === ' '){
-             parede.classList.add('Labirinto__Passagem')
-            allLabirinto.appendChild(parede)  
-        }
-        else if(mapLine[j] === 'S'){
-             parede.classList.add('Labirinto__Start')
-            allLabirinto.appendChild(parede)  
-        }
-        else if(mapLine[j] === 'F'){
-            parede.classList.add('Labirinto__Finish')
-           allLabirinto.appendChild(parede)  
-       }
+        if (mapLine[j] === 'W') {
 
+            parede.classList.add('Labirinto__Parede')
+            allLabirinto.appendChild(parede)
+        }
+        else if (mapLine[j] === ' ') {
+            parede.classList.add('Labirinto__Passagem')
+            allLabirinto.appendChild(parede)
+        }
+        else if (mapLine[j] === 'S') {
+
+            largada.classList.add('Labirinto__Start')
+            allLabirinto.appendChild(largada)
+        }
+        else if (mapLine[j] === 'F') {
+
+            chegada.classList.add('Labirinto__Finish')
+            allLabirinto.appendChild(chegada)
+        }
     }
-    
 }
+
+/*-----------------------------------------------------------*/
+//Jogador
+let playerPosition = [9,0]
+const player = document.createElement('div')
+player.classList.add('Labirinto__player')
+largada.appendChild(player)
+
+let boxVertical = 0;
+let boxHorizontal = 0;
+
+document.addEventListener('keydown', (event) => {
+    const keyName = event.key;
+    if (keyName === 'ArrowDown' && map[playerPosition[0]+ 1][playerPosition[1]] === ' ') {
+        playerPosition[0] += 1
+        boxVertical += 21
+        player.style.top = boxVertical + "px"
+    }
+    else if (keyName === 'ArrowUp' && map[playerPosition[0]- 1][playerPosition[1]] === ' ') {
+        playerPosition[0] -= 1
+        boxVertical -= 21
+        player.style.top = boxVertical + "px";
+    }
+
+    else if (keyName === 'ArrowRight' && map[playerPosition[0]][playerPosition[1]+ 1] === ' ') {
+        playerPosition[1] += 1
+        boxHorizontal += 21
+
+        player.style.left = boxHorizontal + "px";
+    }
+    else if (keyName === 'ArrowLeft' && map[playerPosition[0]][playerPosition[1]-1] === ' ') {
+        playerPosition[1] -= 1
+        boxHorizontal -= 21
+        player.style.left = boxHorizontal + "px";
+    }
+    else if (keyName === 'ArrowLeft' && map[playerPosition[0]][playerPosition[1]-1] === 'F') {
+        playerPosition[1] -= 1
+        boxHorizontal -= 21
+        player.style.left = boxHorizontal + "px";
+    }
+});
+
 

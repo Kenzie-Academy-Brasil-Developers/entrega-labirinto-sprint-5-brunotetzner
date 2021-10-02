@@ -24,10 +24,8 @@ const playAgain = document.createElement('button')
 
 function labirinto(){
     let mapLine
-    let mapAllItens = []
     for (let i = 0; i < map.length; i++) {
      mapLine = map[i].split('')
-        mapAllItens.push(mapLine)
         for (let j = 0; j < mapLine.length; j++) {
          const parede = document.createElement('div')
          if (mapLine[j] === 'W') {
@@ -115,12 +113,8 @@ document.addEventListener('keydown', (event) => {
         player.style.left = boxHorizontal + "px";
         victory()
     }
-    else if (keyName === 'ArrowLeft' && map[playerPosition[0]][playerPosition[1]-1] === ' ') { 
-        playerPosition[1] -= 1
-        boxHorizontal -= 21
-        player.style.left = boxHorizontal + "px";  
-    }
-    else if (keyName === 'ArrowLeft' && map[playerPosition[0]][playerPosition[1]-1] === 'S') { 
+    else if (keyName === 'ArrowLeft' && map[playerPosition[0]][playerPosition[1]-1] === ' ' ||
+    keyName === 'ArrowLeft' && map[playerPosition[0]][playerPosition[1]-1] === 'S') { 
         playerPosition[1] -= 1
         boxHorizontal -= 21
         player.style.left = boxHorizontal + "px";  
